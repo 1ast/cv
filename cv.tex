@@ -26,7 +26,7 @@
 %----------------------------------------------------------------------------------------
 
 % article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,8pt]{article}
 
 %----------------------------------------------------------------------------------------
 %	FONT
@@ -97,32 +97,6 @@
 %debug page outer frames
 %\usepackage{showframe}
 
-
-% job listing environments
-\newenvironment{jobshort}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    }
-    {
-    }
-
-\newenvironment{joblong}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
-    }
-    {
-    \end{itemize}
-    \end{minipage}    
-    }
-
-
-
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
@@ -145,7 +119,7 @@
 \Huge{Anton Schur} \\[7.5pt]
 \href{https://github.com/1ast}{\raisebox{-0.05\height}\faGithub\ 1ast} \ $|$ \ 
 \href{https://www.linkedin.com/in/anton-schur/}{\raisebox{-0.05\height}\faLinkedin\ Anton Schur} \ $|$ \ 
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
+\href{https://laststranger.t.me}{\raisebox{-0.05\height}\ \faTelegram  \ LastStranger} \ $|$ \ 
 \href{mailto:schur2982@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ schur2982@gmail.com} \ $|$ \ 
 \href{tel:+375333801179}{\raisebox{-0.05\height}\faMobile \ +375(33)380-11-79} \\
 \end{tabularx}
@@ -156,27 +130,53 @@
 
 %Interests/ Keywords/ Summary
 \section{Summary}
-This CV is automatically generated and deployed using the \href{https://github.com/jitinnair1/autoCV}{autoCV} template along with GitHub Actions such that a new version of the CV is compiled, published and ready for use when the cv.tex file is updated. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
+As an Android developer with three years of experience, I have in-depth knowledge of the Android platform and proficiency in Java and Kotlin. I have experience working with tools such as Android Studio, Gradle, and ProGuard. Also, I worked with NFC, GPIO, and encryption, wrote complex algorithms for user location, and implemented best practices in software development, including design patterns and RESTful API principles. I want to obtain a position in professional development where my skills and knowledge are valued and can benefit the organization.
 
 %Experience
 \section{Work Experience}
 
-\begin{jobshort}{Designation}{Jan 2021 - present}
-long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
-\end{jobshort}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Android Developer} & \hfill May 2023 - Present \\[3.75pt]
+\textit{\small Heads and Hands} & \hfill \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item Successfully prepared 3 apps for publishing in Google Play;
+        \item Refactored ProGuard rules, that reduced build time of release build for 40\%;
+        \item Adopted code for multi-app builds (2 apps in one code base);
+        \item Changed telemetry API in the app, which reduced analytic network calls by 30\%;
+        \item Optimised one of the most heavily loaded parts of the application, that fully removes freezing from app.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
 
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Android Developer} & \hfill Nov 2021 - Present \\[3.75pt]
+\textit{\small Science Solutions} & \hfill \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item Single-handedly wrote and handed over to the customer app that works with NFC, QR-reading, and custom encryption without documentation;
+        \item Realised custom complex algorithm that shows ads depending on location;
+        \item Wrote custom player that can show content depending on its type (Text, image, or video);
+        \item Optimised processes on the team, reducing decision time by 50\%.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
 
-\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
-\item long long line of blah blah that will wrap when the table fills the column width
-\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
-\end{joblong}
-  
 %Projects
 \section{Projects}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+\textbf{Funday} & \hfill \href{https://play.google.com/store/apps/details?id=ru.funday.android.app}{Link to App} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Funday - app for online shopping in a big chain of clothing stores. As a developer on this project, I realized the Profile page and its subpages, product listing, category pages, and parts of ordering. Also, I changed user analytics and telemetry in the app, which reduced network calls, app size, and app loading on the system. I refactored part of the code, that optimized UI and user input and removed any freezing in the app.}  \\
+\textbf{PVIS}\\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Passengers visual information system - service for displaying ad and useful information in public transport. As a Project Lead, I defined and created the app's architecture. Also, I wrote the most complex algorithms that use the location of transport to show ads, and GPIO integration without any documentation for device, admin, root rights, and player, which can show a lot of custom content (not only video). Also, I wrote all the design, network, and database layers of the app and its main logic.}  \\
+\textbf{Controller app}\\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Controller app - service for public transport controllers, that work with NFC, QR scanning, custom encryption, and custom complex location algorithm. This app uses a lot of custom technologies, but it can be started and worked on any phone with NFC and a camera. In this app, all custom technologies integration, network, database layer, UI, domain logic, and algorithms were realized by myself.}  \\
+
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -184,34 +184,15 @@ long long line of blah blah that will wrap when the table fills the column width
 %----------------------------------------------------------------------------------------
 \section{Education}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
-
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
-
-2022 & Class 12th Some Board \hfill  (Grades) \\
-
-2021 & Class 10th Some Board \hfill  (Grades) \\
+2018 - 2022 & Bachelor's Degree at \textbf{Belarusian State University of Informatics and Radio-electronics, AI faculty} \\
 \end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
-\end{tabularx}
+Kotlin, Java, SQL, Android SDK, KMP, MV* Architecture, Jetpack libs, Compose Multiplatform, Material Design (2, 3), Koin, Dagger Hilt, Coroutines, Rest API, Ktor, Retrofit2, Okhttp3, Room, SharedPreferances, DataStore, LiveData, Flow, Cicerone, Navigation Component, Glide, Picasso, Coil, Lottie, Firebase, AppMetrica, Sentry, Notion, AppsFlyer, JUnit, Mockito, Espresso
 
 \vfill
-\center{\footnotesize Last updated: \today}
 
 \end{document}
